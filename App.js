@@ -6,13 +6,13 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ItemDetails from "./src/components/ItemDetails";
 
-const Stack = createNativeStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 
 export default function App() {
   return (
     <GestureHandlerRootView className="flex-1">
       <NavigationContainer>
-        <Stack.Navigator
+        <Navigator
           initialRouteName="BoardScreen"
           screenOptions={{
             contentStyle: {
@@ -23,17 +23,17 @@ export default function App() {
             },
           }}
         >
-          <Stack.Screen
+          <Screen
             name="BoardScreen"
             component={Board}
             options={{ headerShown: false, title: "Board" }}
           />
-          <Stack.Screen
+          <Screen
             name="ItemDetailsScreen"
             component={ItemDetails}
             options={{ title: "Item Details" }}
           />
-        </Stack.Navigator>
+        </Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
   );
