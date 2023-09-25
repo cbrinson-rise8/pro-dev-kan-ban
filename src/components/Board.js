@@ -1,10 +1,11 @@
-import { Text, View } from 'react-native';
-import Column from './Column';
+import { Text, View } from "react-native";
+import Column from "./Column";
 
-export default function Board() {
+export default function Board({ navigation }) {
+
   return (
     <View className="flex flex-col justify-center items-center w-11/12 h-5/6 bg-blue-500 border-2">
-        <Column />
+      <Column navigation={navigation} />
     </View>
   );
 }

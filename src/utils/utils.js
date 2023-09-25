@@ -1,5 +1,5 @@
 export const getBoardData = async () => {
-    // const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+    // const response = await fetch('https://jsonplaceholder.com/data');
     // const data = await response.json();
     // return data;
 
